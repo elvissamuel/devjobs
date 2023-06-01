@@ -1,0 +1,23 @@
+// Primary colors
+$p_violet: #5964E0;
+$p_lightViolet: #939BF4;
+$p_darkBlue: #19202D;
+$p_midnight: #121721;
+
+//Secondary colors
+$s_white: #FFFFFF;
+$s_lightGrey: #F4F6F8;
+$s_grey: #9DAEC2;
+$s_darkGrey: #6E8098;
+
+//Light theme
+$primary_bg_light: $p_midnight;
+$secondary_bg_light: $p_darkBlue;
+$primary_text_light: $p_midnight;
+$secondary_text_light: $s_darkGrey;
+
+//Dark theme
+$primary_bg_dark: $p_darkBlue;
+$secondary_bg_dark: $p_midnight;
+$primary_text_dark: $s_white;
+$secondary_text_dark: $s_darkGrey;

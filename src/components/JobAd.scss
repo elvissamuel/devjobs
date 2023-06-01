@@ -1,0 +1,267 @@
+@import '../sass/Mixins.scss';
+@import '../sass/Variables.scss';
+
+
+.JobAd{
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding-bottom: 5rem;
+    position: relative;
+    // background-color: black;
+
+    .myLink{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .searchBox{
+        height: 5rem;
+        width: 32.7rem;
+        position: absolute;
+        left: 50%; top: -2rem;
+        margin-left: -16.35rem;
+        // display: none;
+
+        .title{
+            width: 100%;
+            height: 100%;
+        }
+        .locationIcon{
+            display: none;
+        }
+        .location{
+            display: none;
+        }
+        .checkBox{
+            display: none;
+        }
+
+        input[type="text"]{
+            width: 100%;
+            height: 100%;
+            outline: none;
+            padding-left: 2rem;
+            border: none;
+            box-shadow: 0px 0px 0px .2px #777;
+            border-radius: .5rem;
+        }
+        .searchIcon{
+            position: absolute;
+            right: 1rem; top: .8rem;
+            width: 3.8rem;
+            height: 3.8rem;
+            background-color: $s_lightGrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1rem;
+
+            img{
+                width: 1.8rem;
+                height: auto;
+                color: $s_white;
+                cursor: pointer;
+                opacity: .7;
+            }
+        }
+
+        .filterIcon{
+            position: absolute;
+            right: 6.5rem; top: 1.7rem;
+            width: 1.9rem;
+            height: 1.9rem;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                cursor: pointer;
+                opacity: .7;
+            }
+        }
+        
+    }
+
+
+    .jobAdContainer{
+        width: 32.7rem;
+        height: 25.3rem;
+        background-color: $s_lightGrey;
+        padding-inline: 2rem;
+        padding-top: 5rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        box-shadow: 0px 0px 2px .5px rgb(226, 225, 225);
+        border: none;
+        position: relative;
+        margin-bottom: 5rem;
+
+        .jobLogo{
+            // margin-top: -2rem;
+            position: absolute; top: -2rem; left: 2rem;
+        }
+        .jobDuration{
+            margin-block: 2rem;
+            @include bodyfont;
+            font-size: 1.3rem;
+            color: $s_darkGrey;
+        }
+        .jobPosition{
+            margin-bottom: 2rem;
+            @include h3;
+            font-weight: 600;
+        }
+        .jobCompany{
+            margin-bottom: 3rem;
+            color: $s_darkGrey;
+            @include h4;
+        }
+
+        .jobLocation{
+            @include h4;
+            color: $p_violet;
+        }
+
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .JobAd{
+
+        .searchBox{
+            width: 68.9rem;
+            top: -4rem;
+            height: 6rem;
+            margin-left: -34.45rem;
+            background-color: $s_white;
+            display: flex;
+            box-shadow: 0px 0px 0px .2px #777;
+            
+            
+            input[type="text"]{
+                width: 100%;
+                padding-left: 6rem;
+                border-radius: 0;
+                // box-shadow: none;
+            }
+
+            .title, .location{
+                width: 33%;
+                height: 100%;
+            }
+
+            .locationIcon, .location, .checkBox{
+                display: block;
+            }
+
+            .searchIcon{
+                position: absolute;
+                left: 1rem; top: 2rem;
+                width: 3.8rem;
+                height: 3.8rem;
+                background-color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 1rem;
+            }
+            
+            .locationIcon{
+                position: absolute;
+                left: 23.5rem; top: 2rem;
+                width: 3.8rem;
+                height: 3.8rem;
+                background-color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 1rem;
+            }
+            .filterIcon{
+                display: none;
+            }
+            .checkBox{
+                display: inline-flex;
+                align-items: center;
+                gap: .5rem;
+                // height: 90%;
+                // width: 33%;
+                padding-left: 2rem;
+                padding-block: auto;
+                justify-content: center;
+                // margin-left: 2rem;
+
+                // margin-block: auto;
+                // border: 2px solid blue;
+
+                button{
+                    height: 4.8rem;
+                    border: none;
+                    outline: none;
+                    background-color: $p_violet;
+                    color: $s_white;
+                    padding: 1rem 2rem;
+                    border-radius: 1rem;
+                    margin-left: 2rem;
+                    cursor: pointer;
+                }
+
+                label{
+                    @include h4;
+                }
+                
+            }
+            input[type= 'checkbox']{
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            
+        }
+        .jobBox{
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+    
+            .jobAdContainer{
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    
+}
+
+@media screen and (min-width: 1100px) {
+    .JobAd{
+        .searchBox{
+            width: 100rem;
+            height: 8rem;
+            margin-left: -50rem;
+            top: -4rem;
+
+            .locationIcon{
+                left: 34rem;
+            }
+
+            .checkBox{
+                padding-left: 4rem;
+
+                button{
+                    margin-left: 4rem;
+                }
+            }
+        }
+
+        .jobBox{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    
+}
+

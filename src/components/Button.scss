@@ -1,0 +1,54 @@
+@import '../sass/Variables.scss';
+@import'../sass/Mixins.scss';
+
+.Button{
+
+    .primaryBtn1{
+        height: 4.8rem;
+        width: 14.1rem;
+        background-color: $p_violet;
+        color: $s_white;
+        text-align: center;
+        border: none;
+        @include bodyfont;
+        cursor: pointer;
+        border-radius: .6rem;
+    }
+
+    .primaryBtn1:hover{
+        background-color: $p_lightViolet;
+    }
+
+    .primaryBtn2{
+        height: 4.8rem;
+        width: 14.1rem;
+        background-color: $s_lightGrey;
+        color: $p_violet;
+        text-align: center;
+        border: none;
+        @include bodyfont;
+        cursor: pointer;
+        border-radius: .6rem;
+
+    }
+    .primaryBtn2:hover{
+        background-color: $s_grey;
+    }
+
+    .secondaryBtn1{
+        height: 4.8rem;
+        width: 14.1rem;
+        background-color: $s_darkGrey;
+        color: $s_white;
+        text-align: center;
+        border: none;
+        @include bodyfont;
+        cursor: pointer;
+        border-radius: .6rem;
+
+    }
+    .secondaryBtn1:hover{
+        background-color: $s_lightGrey;
+        color: $s_darkGrey;
+    }
+}

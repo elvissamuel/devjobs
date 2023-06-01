@@ -1,0 +1,97 @@
+@import '../sass/Variables.scss';
+@import '../sass/Mixins.scss';
+
+.Navigation{
+
+    .checkBtn{
+        // z-index: 11;
+    }
+    
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    .navigationContainer{
+        background-color: $p_violet;
+        display: flex;
+        justify-content: space-between;
+        height: 8.6rem;
+        padding-top: 2rem;
+        padding-inline: 2rem;
+        position: relative;
+        // z-index: -1;
+    
+        .navLogo{
+            width: 8.5rem;
+            height: 2rem;
+        }
+    
+        .themeBtn{
+            display: flex;
+            gap: 1rem;
+    
+            .lightIcon, .darkIcon{
+                width: 1.4rem;
+                height: 1.4rem;
+            }
+    
+            .checkBtn{
+                
+                input[type="checkbox"]{
+                    position: relative;
+                    width: 4rem;
+                    height: 2rem;
+                    -webkit-appearance: none;
+                    background-color: $s_white;
+                    outline: none;
+                    border-radius: 1rem;
+                    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+                    cursor: pointer;
+
+                }
+                
+                input:checked[type="checkbox"]{
+                    background-color: $p_midnight;
+                }
+                
+                input[type="checkbox"]::before{
+                    content: '';
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50%;
+                    position: absolute; left: 0; top: 0;
+                    background-color: $p_violet;
+                    transform: scale(.9);
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+                }
+                input:checked[type="checkbox"]::before{
+                    left: 2.5rem;
+                    background-color: $s_white;
+                
+                }
+            }
+    
+        }
+    
+        
+    }
+
+    
+}
+
+@media screen and (min-width: 768px) {
+    .Navigation{
+
+        .navigationContainer{
+            height: 12rem;
+        }
+    }
+}
+
+
+
+
+
+
