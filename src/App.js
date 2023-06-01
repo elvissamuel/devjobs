@@ -66,7 +66,6 @@ function App() {
       <JobContext.Provider value={contextValues}>
         <HashRouter basename="/"> 
           <Navigation />
-          <JobAd />
         
           <Routes>
             <Route path='/' Component={JobAd} />
