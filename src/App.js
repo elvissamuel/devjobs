@@ -64,7 +64,7 @@ function App() {
   return (
     <div className="App">
       <JobContext.Provider value={contextValues}>
-        <Router> 
+        <Router basename="/devjobs"> 
           <Navigation />
           {/* <JobAd /> */}
 
