@@ -1,5 +1,5 @@
 import './App.scss';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, HashRouter } from "react-router-dom";
 // import { useLocalStorageState } from 'use-local-storage-state';
 import Button from './components/Button';
 import JobAd from './components/JobAd';
@@ -64,12 +64,10 @@ function App() {
   return (
     <div className="App">
       <JobContext.Provider value={contextValues}>
-        <Router basename="/devjobs"> 
+        <HashRouter basename="/"> 
           <Navigation />
           <JobAd />
-
-          {/* <JobAd /> */}
-
+        
           <Routes>
             <Route path='/' Component={JobAd} />
 
@@ -79,7 +77,7 @@ function App() {
               )
             })}
           </Routes>
-      </Router>
+      </HashRouter>
       </JobContext.Provider>
      
     </div>
