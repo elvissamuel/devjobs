@@ -66,8 +66,7 @@ function App() {
       <JobContext.Provider value={contextValues}>
         <Router basename="/devjobs"> 
           <Navigation />
-          <Route path='/' Component={JobAd} />
-
+          <JobAd />
 
           {/* <JobAd /> */}
 
